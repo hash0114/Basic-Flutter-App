@@ -31,14 +31,14 @@ Widget build(BuildContext context) {
         children: [
           // First Horizontal Scroller with remote images
           SizedBox(
-            height: 350,
+            height: 350,width: 700,
             child: RemoteImageScroller(),
           ),
           const SizedBox(height: 8), 
 
           // ListTiles with different font variations
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25), 
+            padding: const EdgeInsets.symmetric(horizontal: 16), 
             child: Container(
               color: Colors.lightBlueAccent, // Background color
               child: const ListTile(
@@ -56,7 +56,7 @@ Widget build(BuildContext context) {
           const SizedBox(height: 10), 
 
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Container(
               color: Colors.lightBlueAccent,
               child: const ListTile(
@@ -74,7 +74,7 @@ Widget build(BuildContext context) {
           const SizedBox(height: 10), 
 
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Container(
               color: Colors.lightBlueAccent,
               child: const ListTile(
@@ -92,7 +92,7 @@ Widget build(BuildContext context) {
           const SizedBox(height: 10),
 
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Container(
               color: Colors.lightBlueAccent,
               child: const ListTile(
@@ -110,7 +110,7 @@ Widget build(BuildContext context) {
           const SizedBox(height: 10), 
 
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Container(
               color: Colors.lightBlueAccent,
               child: const ListTile(
@@ -161,7 +161,7 @@ class RemoteImageScroller extends StatelessWidget {
             
             child: Image.network(
               imageUrls[index],
-              width: 300,
+              width: 365,
               height: 350,
               fit: BoxFit.cover,
               loadingBuilder: (context, child, loadingProgress) {
@@ -174,15 +174,7 @@ class RemoteImageScroller extends StatelessWidget {
                   ),
                 );
               },
-              errorBuilder: (context, error, stackTrace) {
-                return SizedBox(
-                  width: 300,
-                  height: 350,
-                  child: Center(
-                    child: Icon(Icons.error, color: Colors.red, size: 40),
-                  ),
-                );
-              },
+            
             ),
           ),
         );
@@ -212,7 +204,7 @@ class AssetImageScroller extends StatelessWidget {
             
             child: Image.asset(
               assetPaths[index],
-              width: 300,
+              width: 365,
               height: 350,
               fit: BoxFit.cover,
             ),
