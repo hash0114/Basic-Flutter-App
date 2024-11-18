@@ -1,0 +1,33 @@
+name: flutter_class_project_1
+description: "A new Flutter project."
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.4.3 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Doto
+      fonts:
+        - asset: assets/fonts/Doto-Regular.ttf
+        - asset: assets/fonts/Doto-Bold.ttf
+        - asset: assets/fonts/Doto-Thin.ttf
+    - family: SourGummy
+      fonts:
+        - asset: assets/fonts/SourGummy-Regular.ttf
+        - asset: assets/fonts/SourGummy-SemiBold.ttf
+  assets:
+    - assets/images/cross1.jpg
+    - assets/images/cross2.jpg
+    - assets/images/cross3.jpg
